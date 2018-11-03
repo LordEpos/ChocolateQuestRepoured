@@ -1,5 +1,6 @@
 package com.cqr.proxy;
 
+import com.cqr.block.BasicBlock;
 import com.cqr.item.BasicItem;
 import com.cqr.main.ChocolateQuestRepoured;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -28,6 +29,9 @@ public class ClientProxy extends CommonProxy{
         super.init();
         for(BasicItem item:registeredItems) {
             item.registerModel();
+        }
+        for(BasicBlock block:registeredBlocks) {
+            block.registerModel();
         }
     }
 }

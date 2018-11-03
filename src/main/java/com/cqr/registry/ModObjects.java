@@ -1,5 +1,6 @@
 package com.cqr.registry;
 
+import com.cqr.item.BasicItem;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;

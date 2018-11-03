@@ -1,5 +1,6 @@
 package com.cqr.proxy;
 
+import com.cqr.block.BasicBlock;
 import com.cqr.item.BasicItem;
 import com.cqr.main.ChocolateQuestRepoured;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class CommonProxy {
 
     public static final ArrayList<BasicItem> registeredItems = new ArrayList<>();
+    public static final ArrayList<BasicBlock> registeredBlocks = new ArrayList<>();
 
     public void registerDefaultItemModel(Item item) {
     }
