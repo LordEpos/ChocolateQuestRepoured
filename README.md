@@ -1,5 +1,5 @@
 # ChocolateQuestRepoured
-ChocolateQuest Re-poured! Huzzah!
+ChocolateQuest Re-poured!
 
 IntelliJ SetUp Tutroial:
 - Open any Project
