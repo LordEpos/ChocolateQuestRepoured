@@ -31,7 +31,6 @@ public class ChocolateQuestRepoured
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        proxy.init();
     }
 
     @EventHandler

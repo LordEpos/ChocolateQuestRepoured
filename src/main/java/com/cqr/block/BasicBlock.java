@@ -1,6 +1,7 @@
 package com.cqr.block;
 
 import com.cqr.main.ChocolateQuestRepoured;
+import com.cqr.model.ModelHandler;
 import com.cqr.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,10 +15,10 @@ public class BasicBlock extends Block {
         super(materialIn);
         setUnlocalizedName(name);
         setRegistryName(name);
-        CommonProxy.registeredBlocks.add(this);
+        ModelHandler.registeredBlocks.add(this);
     }
 
     public void registerModel() {
-        ChocolateQuestRepoured.proxy.registerDefaultItemModel(Item.getItemFromBlock(this));
+        ModelHandler.registerDefaultItemModel(Item.getItemFromBlock(this));
     }
 }

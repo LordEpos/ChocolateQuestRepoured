@@ -1,8 +1,11 @@
 package com.cqr.registry;
 
+import com.cqr.block.BasicBlock;
 import com.cqr.item.BasicItem;
+import com.cqr.model.ModelHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -26,5 +29,15 @@ public class ModObjects {
     @SubscribeEvent
     public void registerBlock(RegistryEvent.Register<Block> event) {
 
+    }
+
+    @SubscribeEvent
+    public void registerModel(ModelRegistryEvent event) {
+        for(BasicItem item: ModelHandler.registeredItems) {
+            item.registerModel();
+        }
+        for(BasicBlock block:ModelHandler.registeredBlocks) {
+            block.registerModel();
+        }
     }
 }

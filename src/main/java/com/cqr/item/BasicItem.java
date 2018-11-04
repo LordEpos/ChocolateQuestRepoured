@@ -1,6 +1,7 @@
 package com.cqr.item;
 
 import com.cqr.main.ChocolateQuestRepoured;
+import com.cqr.model.ModelHandler;
 import com.cqr.proxy.CommonProxy;
 import net.minecraft.item.Item;
 
@@ -11,10 +12,10 @@ public class BasicItem extends Item {
     public BasicItem(String name) {
         setUnlocalizedName(name);
         setRegistryName(name);
-        CommonProxy.registeredItems.add(this);
+        ModelHandler.registeredItems.add(this);
     }
 
     public void registerModel() {
-        ChocolateQuestRepoured.proxy.registerDefaultItemModel(this);
+        ModelHandler.registerDefaultItemModel(this);
     }
 }

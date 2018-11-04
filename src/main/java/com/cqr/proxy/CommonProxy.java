@@ -14,15 +14,6 @@ import java.util.ArrayList;
  */
 public class CommonProxy {
 
-    public static final ArrayList<BasicItem> registeredItems = new ArrayList<>();
-    public static final ArrayList<BasicBlock> registeredBlocks = new ArrayList<>();
-
-    public void registerDefaultItemModel(Item item) {
-    }
-
-    public void registerComplexItemModel(Item item,int meta,String variant) {
-    }
-
     public void init() {
     }
 }
