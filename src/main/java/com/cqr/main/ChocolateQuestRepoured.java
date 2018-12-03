@@ -1,7 +1,6 @@
 package com.cqr.main;
 
-import com.cqr.proxy.CommonProxy;
-import com.cqr.registry.ModObjects;
+import me.marnic.modapi.proxy.CommonProxy;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -17,6 +16,7 @@ public class ChocolateQuestRepoured
     public static final String MODID = "cqr";
     public static final String NAME = "ChocolateQuestRepoured";
     public static final String VERSION = "0.1a";
+    private static final CQRModHandler MOD_HANDLER = new CQRModHandler();
 
     private static Logger logger;
 
@@ -24,8 +24,9 @@ public class ChocolateQuestRepoured
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
-        ModObjects.init();
-        MinecraftForge.EVENT_BUS.register(new ModObjects());
+        MOD_HANDLER.init();
+        proxy.preInit();
+        MinecraftForge.EVENT_BUS.register(MOD_HANDLER);
     }
 
     @EventHandler
@@ -39,6 +40,6 @@ public class ChocolateQuestRepoured
 
     }
 
-    @SidedProxy(clientSide = "com.cqr.proxy.ClientProxy",serverSide = "com.cqr.proxy.ServerProxy")
+    @SidedProxy(clientSide = "me.marnic.modapi.proxy.ClientProxy",serverSide = "me.marnic.modapi.proxy.CommonProxy")
     public static CommonProxy proxy;
 }
