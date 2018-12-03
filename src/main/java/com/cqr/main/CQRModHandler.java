@@ -7,7 +7,9 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 /**
- * Created by Marcel on Dez,2018
+ * Copyright (c) 03.12.2018
+ * Developed by MrMarnic
+ * GitHub: https://github.com/MrMarnic
  */
 public class CQRModHandler extends ModHandler {
     @Override
