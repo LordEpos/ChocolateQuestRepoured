@@ -12,11 +12,23 @@ import net.minecraftforge.event.RegistryEvent;
  * GitHub: https://github.com/MrMarnic
  */
 public class CQRModHandler extends ModHandler {
+
+    //Initialize your objects here like
+    //item = new Item();
+    @Override
+    public void init() {
+
+    }
+
+    //Register your blocks here like
+    //event.getRegistry().register(block);
     @Override
     public void registerBlocks(RegistryEvent.Register<Block> event) {
 
     }
 
+    //Register your items here like
+    //event.getRegistry().register(item);
     @Override
     public void registerItems(RegistryEvent.Register<Item> event) {
 

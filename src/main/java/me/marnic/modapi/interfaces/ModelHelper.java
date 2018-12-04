@@ -10,6 +10,10 @@ import net.minecraftforge.client.model.ModelLoader;
  * GitHub: https://github.com/MrMarnic
  */
 public class ModelHelper {
+
+    /*
+        This system is now used to register Models
+     */
     public static void registerComplexItemModel(Item item, int meta, String variant) {
         ModelLoader.setCustomModelResourceLocation(item,meta,new ModelResourceLocation(item.getRegistryName(),variant));
     }

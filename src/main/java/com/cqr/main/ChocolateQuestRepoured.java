@@ -32,12 +32,13 @@ public class ChocolateQuestRepoured
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
+        proxy.init();
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        proxy.postInit();
     }
 
     @SidedProxy(clientSide = "me.marnic.modapi.proxy.ClientProxy",serverSide = "me.marnic.modapi.proxy.CommonProxy")

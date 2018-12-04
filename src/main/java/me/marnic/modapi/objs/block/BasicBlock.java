@@ -20,6 +20,8 @@ public class BasicBlock extends Block implements IModelRegistry {
         ModHandler.modelsToRegister.add(this);
     }
 
+
+    //Override this if you want an specific model registration
     @Override
     public void registerModel() {
         ModelHelper.registerDefaultItemModel(Item.getItemFromBlock(this));

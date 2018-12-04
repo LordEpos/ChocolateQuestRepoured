@@ -18,6 +18,7 @@ public class BasicItem extends Item implements IModelRegistry {
         ModHandler.modelsToRegister.add(this);
     }
 
+    //Override this if you want an specific model registration
     @Override
     public void registerModel() {
         ModelHelper.registerDefaultItemModel(this);
